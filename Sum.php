@@ -12,7 +12,7 @@ class Sum {
     public static function toStr($number, $asPrice = true)
     {
         $words = array(
-            '_0' => 'ноль',
+            'null' => 'ноль',
             0 => '', 1 => 'один', 2 => 'два', 3 => 'три', 4 => 'четыре', 5 => 'пять', 6 => 'шесть', 7 => 'семь',
             8 => 'восемь', 9 => 'девять', '_1' => 'одна', '_2' => 'две', '_3' => 'три', '_4' => 'четыре',
             '_5' => 'пять', '_6' => 'шесть', '_7' => 'семь', '_8' => 'восемь', '_9' => 'девять',
@@ -33,7 +33,7 @@ class Sum {
         $kop = substr((isset($number[1]) ? $number[1].'00' : '00'), 0, 2);
         $number = $number[0];
         if (intval($number) == 0) {
-            $result = $words['_0'];
+            $result = $words['null'];
         } else {
             $parts = str_split($number, 3);
             while (strlen($parts[count($parts) - 1]) < 3) {
@@ -53,7 +53,7 @@ class Sum {
                     $a *= 100;
                     $b *= 10;
                     $c *= 1;
-                    $string = $words[$a] . ' ' . $words[$b] . ' ' . $words[($key == 1 ? '_' . $c : $c)];
+                    $string = trim($words[$a] . ' ' . $words[$b] . ' ' . $words[($key == 1 ? '_' . $c : $c)]);
                     $label = $key . (($c == 1) ? '_1' : (($c > 1 && $c < 5) ? '_2' : '_5'));
                 }
                 $string .= $words[$label];
