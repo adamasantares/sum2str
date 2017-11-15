@@ -31,3 +31,8 @@ or
       "adamasantares/sum2str": "0.1.1"
   }
 ```
+
+```
+# fast testing
+./vendor/adamasantares/sum2str/test/run
+```
