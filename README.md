@@ -21,7 +21,7 @@ Sum2Str::toStr(150, false); // => "сто пятьдесят"
 ## Composer
 
 ```
-composer require adamasantares/sum2str "0.1.1"
+composer require  "adamasantares/sum2str"
 ```
 
 or
