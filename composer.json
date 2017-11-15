@@ -1,0 +1,24 @@
+{
+  "name": "adamasantares/sum2str",
+  "description": "Перевод суммы из числа в строку",
+  "keywords": ["sum to string", "russian language only"],
+  "homepage": "https://github.com/adamasantares/sum2str#readme",
+  "type": "library",
+  "minimum-stability": "dev",
+  "prefer-stable" : true,
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Konstantin Kutsevalov",
+      "email": "konstantin@kutsevalov.name"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "adamasantares\\sum2str\\": ""
+    }
+  }
+}
